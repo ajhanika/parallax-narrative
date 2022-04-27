@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keep A-Goin'</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+    
+        </ul>
+    </header>
+    <section>
+        <img src="img/sky.png" id="sky" alt="sky">
+        <img src="img/roses-behind.png" id="rosesBehind" alt="rose bushes">
+        <h2 id="text">If you strike a thorn or rose</h2>
+        <!-- <a href="#sec" id="btn">Explore</a> -->
+        <img src="img/roses-front.png" id="rosesFront">
+
+    </section>
+    <div class="sec" id="sec">
+        <h2> Keep a-goin'! </h2>
+    </div>
+
+   <!-- <section>
+        <img src="img/sky.png" id="sky" alt="sky">
+        <img src="img/roses-behind.png" id="rosesBehind" alt="rose bushes">
+        <h2 id="text">If it rains or if it snows</h2>
+         <a href="#sec" id="btn">Explore</a> 
+        <img src="img/roses-front.png" id="rosesFront">
+
+    </section>
+
+    <div class="sec" id="sec">
+        <h2> Keep a-goin'! </h2>
+    </div>
+-->
+
+    <script>
+        let sky = document.getElementById('sky');
+        let rosesBehind = document.getElementById('rosesBehind');
+        let rosesFront = document.getElementById('rosesFront');
+        let text = document.getElementById('text');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            // sky.style.top = value * 1.5 + 'px';
+            rosesBehind.style.top = value * .5 + 'px';
+            rosesFront.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * .5 +'px';
+        })
+    </script>
+</body>
+</html>
